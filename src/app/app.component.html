@@ -8,28 +8,89 @@
 </div>
 
 <div>
-  <mat-spinner></mat-spinner>
+  <mat-sidenav-container>
+    <mat-sidenav>Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main</mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <div>
-  <mat-progress-spinner value="40"></mat-progress-spinner>
+  <mat-sidenav-container>
+    <mat-sidenav opened>Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 1</mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <div>
-  <mat-progress-spinner value="70"></mat-progress-spinner>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened2">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 2
+      <button mat-flat-button color="primary" (click)="opened2=!opened2">Toggle Open</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <div>
-  <mat-progress-spinner value="70"></mat-progress-spinner>
+  <mat-sidenav-container>
+    <mat-sidenav mode="over" [(opened)]="opened3">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 3
+      <button mat-flat-button color="primary" (click)="opened3=!opened3">Toggle Open</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <div>
-  <mat-spinner *ngIf="showSpinner"></mat-spinner>
-  <button mat-button (click)="loadData()"> Load Data</button>
+  <mat-sidenav-container>
+    <mat-sidenav mode="push" [(opened)]="opened4">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 4
+      <button mat-flat-button color="primary" (click)="opened4=!opened4">Toggle Open</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <div>
-  <mat-progress-bar value="49"></mat-progress-bar>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" [(opened)]="opened5">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 5
+      <button mat-flat-button color="primary" (click)="opened5=!opened5">Toggle Open</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened6">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 6
+      <button mat-flat-button color="primary" (click)="opened6=!opened6">Toggle Open</button>
+      <button mat-button color="primary" (click)="sidenav.open()">Open</button>
+      <button mat-button color="warn" (click)="sidenav.close()">Close</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav2 mode="side" [(opened)]="opened7">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 7
+      <button mat-flat-button color="primary" (click)="opened7=!opened7">Toggle Open</button>
+      <button mat-button color="primary" (click)="sidenav2.open()">Open</button>
+      <button mat-button color="warn" (click)="sidenav2.close()">Close</button>
+      <button mat-button color="warn" (click)="sidenav2.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+<div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav3 mode="side" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened8">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main 8
+      <button mat-flat-button color="primary" (click)="opened8=!opened8">Toggle Open</button>
+      <button mat-button color="primary" (click)="sidenav3.open()">Open</button>
+      <button mat-button color="warn" (click)="sidenav3.close()">Close</button>
+      <button mat-button color="warn" (click)="sidenav3.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 
 <router-outlet></router-outlet>
