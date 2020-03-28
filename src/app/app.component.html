@@ -7,67 +7,35 @@
        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 
-<!--<div>-->
-<!--  <mat-grid-list cols="2">-->
-<!--    <mat-grid-tile>Title 1</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 2</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 3</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 4</mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--</div>-->
+<mat-accordion multi="true">
+<div>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Angular Fundamentals</mat-panel-title>
+      <mat-panel-description>Total Duration: 3 Hours</mat-panel-description>
+    </mat-expansion-panel-header>
 
-<!--  <div>-->
-<!--    <mat-grid-list cols="2">-->
-<!--      <mat-grid-tile rowspan="2">Title 5</mat-grid-tile>-->
-<!--      <mat-grid-tile>Title 6</mat-grid-tile>-->
-<!--      <mat-grid-tile>Title 7</mat-grid-tile>-->
-<!--      <mat-grid-tile>Title 8</mat-grid-tile>-->
-<!--    </mat-grid-list>-->
-<!--  </div>-->
-
-<!--<div>-->
-<!--  <mat-grid-list cols="2">-->
-<!--    <mat-grid-tile colspan="2">Title 9</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 10</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 11</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 12</mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--</div>-->
-
-<!--<div>-->
-<!--  <mat-grid-list cols="2" rowHeight="100px">-->
-<!--    <mat-grid-tile>Title 1</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 2</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 3</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 4</mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--</div>-->
-
-<!--<div>-->
-<!--  <mat-grid-list cols="2" rowHeight="2:1">-->
-<!--    <mat-grid-tile>Title 1</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 2</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 3</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 4</mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--</div>-->
-
-<!--<div>-->
-<!--  <mat-grid-list cols="2" rowHeight="fit" style="height: 200px">-->
-<!--    <mat-grid-tile>Title 1</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 2</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 3</mat-grid-tile>-->
-<!--    <mat-grid-tile>Title 4</mat-grid-tile>-->
-<!--  </mat-grid-list>-->
-<!--</div>-->
+    <p>This is the panel content. Add course details.</p>
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</div>
 
 <div>
-  <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
-    <mat-grid-tile>Title 1</mat-grid-tile>
-    <mat-grid-tile>Title 2</mat-grid-tile>
-    <mat-grid-tile>Title 3</mat-grid-tile>
-    <mat-grid-tile>Title 4</mat-grid-tile>
-  </mat-grid-list>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Angular Material</mat-panel-title>
+      <mat-panel-description>Total Duration: 2 hours</mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>This is the panel content. Add course details.</p>
+
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
 </div>
+</mat-accordion>
 
 <router-outlet></router-outlet>
