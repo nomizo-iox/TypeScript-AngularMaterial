@@ -8,45 +8,9 @@
 </div>
 
 <div>
-  <button mat-raised-button color="primary">Raised Button Color</button>
-  <button mat-raised-button>Raised Button</button>
-  <button mat-flat-button>Flat Button</button>
-  <button mat-button disableRipple>Button</button>
+  <mat-icon>grade</mat-icon>
+  <mat-icon color="primary">dns</mat-icon>
+  <mat-icon color="accent">alarm</mat-icon>
 </div>
-
-<div>
-  <button mat-icon-button>Icon</button>
-  <button mat-fab>Fab</button>
-  <button mat-mini-fab>MiniFab</button>
-</div>
-
-<div>
-  <mat-button-toggle>Toggle</mat-button-toggle>
-  <mat-button-toggle #buttonToggle>Toggle</mat-button-toggle>
-  {{buttonToggle.checked}}
-
-  <mat-button-toggle #buttonToggle2 checked>Toggle</mat-button-toggle>
-  {{buttonToggle2.checked}}
-</div>
-
-<div>
-  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  {{toggleGroup.value}}
-</div>
-
-<div>
-  <mat-button-toggle-group #toggleGroup2="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  {{toggleGroup2.value}}
-</div>
-
-
 
 <router-outlet></router-outlet>
