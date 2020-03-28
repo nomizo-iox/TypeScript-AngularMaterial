@@ -8,83 +8,57 @@
 </div>
 
 <div>
-  <div>
-    <mat-menu #appMenu="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
-      <button mat-menu-item>Backend</button>
-    </mat-menu>
-  </div>
-
-  <div>
-    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
-  </div>
-
-  <div>
-    <mat-menu #subMenu="matMenu">
-      <button mat-menu-item>Angular</button>
-      <button mat-menu-item>React</button>
-      <button mat-menu-item>Vue</button>
-    </mat-menu>
-  </div>
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
 </div>
 
 <div>
-  <div>
-    <mat-menu #appMenu2="matMenu" xPosition="after" yPosition="above">
-      <button mat-menu-item [matMenuTriggerFor]="subMenu2">Java</button>
-      <button mat-menu-item>Python</button>
-    </mat-menu>
-  </div>
-
-  <div>
-    <button class="center" mat-flat-button [matMenuTriggerFor]="appMenu2">Menu 2</button>
-  </div>
-
-  <div>
-    <mat-menu #subMenu2="matMenu">
-      <button mat-menu-item>Spring</button>
-      <button mat-menu-item>Hibernate</button>
-      <button mat-menu-item>Maven</button>
-    </mat-menu>
-  </div>
-</div>
-
-
-<div>
-  <div>
-    <mat-menu #lazyNenu="matMenu">
-      <ng-template matMenuContent>
-        <button mat-menu-item>Settings</button>
-        <button mat-menu-item>Log Out</button>
-      </ng-template>
-    </mat-menu>
-  </div>
-
-  <div>
-    <button  mat-raised-button [matMenuTriggerFor]="lazyNenu">Job</button>
-    <button mat-raised-button  [matMenuTriggerFor]="lazyNenu">Matthew</button>
-  </div>
+  <mat-list dense="">
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
 </div>
 
 <div>
-  <div>
-    <mat-menu #lazyNenu2="matMenu">
-      <ng-template matMenuContent let-name="name">
-        <button mat-menu-item>Settings</button>
-        <button mat-menu-item>Log Out {{name}}</button>
-      </ng-template>
-    </mat-menu>
-  </div>
-
-  <div>
-    <button  mat-raised-button [matMenuTriggerData]="{name: 'Samuel'}" [matMenuTriggerFor]="lazyNenu2">Samuel</button>
-    <button mat-raised-button [matMenuTriggerData]="{name: 'Ayobami'}" [matMenuTriggerFor]="lazyNenu2">Ayobami</button>
-  </div>
+<mat-nav-list>
+  <a mat-list-item href="#">Home</a>
+  <a mat-list-item href="#">About</a>
+  <a mat-list-item href="#">Services</a>
+</mat-nav-list>
 </div>
 
+<div>
+  <mat-list>
+    <mat-list-item>
+    <mat-icon>home</mat-icon>
+    <h3 matLine>Heading</h3>
+    <p matLine>Line</p>
+    </mat-list-item>
+  </mat-list>
+</div>
 
-
-
-
+<div>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>alarm</mat-icon>
+      <h3 matLine>Heading</h3>
+      <p matLine>Line</p>
+    </mat-list-item>
+  </mat-list>
+</div>
+<mat-divider></mat-divider>
+<div>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine>Line</p>
+    </mat-list-item>
+  </mat-list>
+</div>
 
 <router-outlet></router-outlet>
