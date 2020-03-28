@@ -8,23 +8,29 @@
 </div>
 
 <div>
-  <mat-card>
-    <mat-card-title>Angular Material</mat-card-title>
-    <mat-card-content>This is the class content</mat-card-content>
-    <mat-card-actions>
-      <button mat-flat-button color="primary">Login</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-tab-group>
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group>
 </div>
 
 <div>
-  <mat-card>
-    <mat-card-title>Angular Material</mat-card-title>
-    <mat-card-content>This is the class content</mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button color="primary">Login</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-tab-group #tabRef>
+    <mat-tab label="Java">Java Content</mat-tab>
+    <mat-tab label="Python">Python Content</mat-tab>
+    <mat-tab label="Swift">Swift Content</mat-tab>
+  </mat-tab-group>
+  {{tabRef.selectedIndex}}
+</div>
+
+<div>
+  <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="MacOS">Apple Content</mat-tab>
+    <mat-tab label="WindowsOS">Microsoft Content</mat-tab>
+    <mat-tab label="ChromeOS">Google Content</mat-tab>
+  </mat-tab-group>
+  {{tabRef.selectedIndex}}
 </div>
 
 <router-outlet></router-outlet>

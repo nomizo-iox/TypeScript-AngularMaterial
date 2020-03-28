@@ -6,26 +6,17 @@ import {
   MatGridListModule, MatIconModule,
   MatListModule, MatMenuModule,
   MatProgressBarModule, MatProgressSpinnerModule,
-  MatSidenavModule, MatToolbarModule
+  MatSidenavModule, MatTabsModule, MatToolbarModule
 } from '@angular/material';
 
 
 
 const MaterialComponents = [
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatIconModule,
-  MatBadgeModule,
-  MatProgressSpinnerModule,
-  MatProgressBarModule,
-  MatToolbarModule,
-  MatSidenavModule,
-  MatMenuModule,
-  MatListModule,
-  MatDividerModule,
-  MatGridListModule,
-  MatExpansionModule,
-  MatCardModule
+  MatButtonModule, MatButtonToggleModule, MatIconModule,
+  MatBadgeModule, MatProgressSpinnerModule, MatProgressBarModule,
+  MatToolbarModule, MatSidenavModule, MatMenuModule,
+  MatListModule, MatDividerModule, MatGridListModule,
+  MatExpansionModule, MatCardModule, MatTabsModule
 ];
 
 @NgModule({
