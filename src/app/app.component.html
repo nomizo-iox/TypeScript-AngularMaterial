@@ -8,89 +8,83 @@
 </div>
 
 <div>
-  <mat-sidenav-container>
-    <mat-sidenav>Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main</mat-sidenav-content>
-  </mat-sidenav-container>
+  <div>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
+      <button mat-menu-item>Backend</button>
+    </mat-menu>
+  </div>
+
+  <div>
+    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+  </div>
+
+  <div>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item>Angular</button>
+      <button mat-menu-item>React</button>
+      <button mat-menu-item>Vue</button>
+    </mat-menu>
+  </div>
 </div>
 
 <div>
-  <mat-sidenav-container>
-    <mat-sidenav opened>Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 1</mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+  <div>
+    <mat-menu #appMenu2="matMenu" xPosition="after" yPosition="above">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu2">Java</button>
+      <button mat-menu-item>Python</button>
+    </mat-menu>
+  </div>
 
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav [(opened)]="opened2">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 2
-      <button mat-flat-button color="primary" (click)="opened2=!opened2">Toggle Open</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+  <div>
+    <button class="center" mat-flat-button [matMenuTriggerFor]="appMenu2">Menu 2</button>
+  </div>
 
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav mode="over" [(opened)]="opened3">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 3
-      <button mat-flat-button color="primary" (click)="opened3=!opened3">Toggle Open</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav mode="push" [(opened)]="opened4">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 4
-      <button mat-flat-button color="primary" (click)="opened4=!opened4">Toggle Open</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav mode="side" [(opened)]="opened5">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 5
-      <button mat-flat-button color="primary" (click)="opened5=!opened5">Toggle Open</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened6">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 6
-      <button mat-flat-button color="primary" (click)="opened6=!opened6">Toggle Open</button>
-      <button mat-button color="primary" (click)="sidenav.open()">Open</button>
-      <button mat-button color="warn" (click)="sidenav.close()">Close</button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<div>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav2 mode="side" [(opened)]="opened7">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 7
-      <button mat-flat-button color="primary" (click)="opened7=!opened7">Toggle Open</button>
-      <button mat-button color="primary" (click)="sidenav2.open()">Open</button>
-      <button mat-button color="warn" (click)="sidenav2.close()">Close</button>
-      <button mat-button color="warn" (click)="sidenav2.toggle()"><mat-icon>menu</mat-icon></button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <div>
+    <mat-menu #subMenu2="matMenu">
+      <button mat-menu-item>Spring</button>
+      <button mat-menu-item>Hibernate</button>
+      <button mat-menu-item>Maven</button>
+    </mat-menu>
+  </div>
 </div>
 
 
 <div>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav3 mode="side" (opened)="log('Opened')" (closed)="log('Closed')" [(opened)]="opened8">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main 8
-      <button mat-flat-button color="primary" (click)="opened8=!opened8">Toggle Open</button>
-      <button mat-button color="primary" (click)="sidenav3.open()">Open</button>
-      <button mat-button color="warn" (click)="sidenav3.close()">Close</button>
-      <button mat-button color="warn" (click)="sidenav3.toggle()"><mat-icon>menu</mat-icon></button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <div>
+    <mat-menu #lazyNenu="matMenu">
+      <ng-template matMenuContent>
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Log Out</button>
+      </ng-template>
+    </mat-menu>
+  </div>
+
+  <div>
+    <button  mat-raised-button [matMenuTriggerFor]="lazyNenu">Job</button>
+    <button mat-raised-button  [matMenuTriggerFor]="lazyNenu">Matthew</button>
+  </div>
 </div>
+
+<div>
+  <div>
+    <mat-menu #lazyNenu2="matMenu">
+      <ng-template matMenuContent let-name="name">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Log Out {{name}}</button>
+      </ng-template>
+    </mat-menu>
+  </div>
+
+  <div>
+    <button  mat-raised-button [matMenuTriggerData]="{name: 'Samuel'}" [matMenuTriggerFor]="lazyNenu2">Samuel</button>
+    <button mat-raised-button [matMenuTriggerData]="{name: 'Ayobami'}" [matMenuTriggerFor]="lazyNenu2">Ayobami</button>
+  </div>
+</div>
+
+
+
+
+
 
 <router-outlet></router-outlet>

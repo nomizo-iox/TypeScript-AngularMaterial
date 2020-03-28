@@ -1,20 +1,11 @@
 div {
-  margin: 30px;
+  margin: 50px;
 }
 
-mat-sidenav-container {
-  height: 100%;
+.center {
+  margin: 5rem;
 }
 
-mat-sidenav, mat-sidenav-content {
-  padding: 16px;
-}
-
-mat-sidenav {
-  background-color: lightcoral;
-  width: 200px;
-}
-
-button {
-  margin-left: 20px;
+mat-menu {
+  margin-top: 2rem;
 }
