@@ -8,83 +8,79 @@
 </div>
 
 <div>
-  <mat-horizontal-stepper>
-    <mat-step label="Shipping Address"><p>Shipping Address Details</p></mat-step>
-    <mat-step label="Billing Address"><p>Billing Address Details</p></mat-step>
-    <mat-step label="Place Order">Order Details</mat-step>
-  </mat-horizontal-stepper>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput>
+  </mat-form-field>
 </div>
 
 <div>
-  <mat-horizontal-stepper>
-    <mat-step label="Shipping Address">
-      <p>Shipping Address Details</p>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Billing Address">
-      <p>Billing Address Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Place Order">
-      <p>Order Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
-  </mat-horizontal-stepper>
+  <mat-form-field floatLabel="never">
+    <mat-label>Name</mat-label>
+    <input matInput>
+  </mat-form-field>
 </div>
 
 <div>
-  <mat-horizontal-stepper linear>
-    <mat-step label="Shipping Address" completed="false">
-      <p>Shipping Address Details</p>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Billing Address" completed="false">
-      <p>Billing Address Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Place Order" completed="false">
-      <p>Order Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
-  </mat-horizontal-stepper>
+  <mat-form-field floatLabel="auto">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+  </mat-form-field>
 </div>
 
 <div>
-  <mat-horizontal-stepper linear>
-    <mat-step label="Shipping Address" completed="true">
-      <p>Shipping Address Details</p>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Billing Address" completed="false" optional>
-      <p>Billing Address Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Place Order" completed="false">
-      <p>Order Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
-  </mat-horizontal-stepper>
+  <mat-form-field floatLabel="auto" hideRequiredMarker>
+    <mat-label>Name</mat-label>
+    <input matInput required>
+  </mat-form-field>
 </div>
 
 <div>
-  <mat-vertical-stepper linear>
-    <mat-step label="Shipping Address" completed="true">
-      <p>Shipping Address Details</p>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Billing Address" completed="false" optional>
-      <p>Billing Address Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
-    <mat-step label="Place Order" completed="false">
-      <p>Order Details</p>
-      <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
-  </mat-vertical-stepper>
+  <mat-form-field floatLabel="auto" hideRequiredMarker>
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint>Min 5 characters</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field floatLabel="auto" hideRequiredMarker>
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field floatLabel="auto" hideRequiredMarker appearance="legacy">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field floatLabel="auto" hideRequiredMarker appearance="standard">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" color="accent">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline" color="warn">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
 </div>
 
 <router-outlet></router-outlet>
