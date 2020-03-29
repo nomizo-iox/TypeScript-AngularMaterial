@@ -10,4 +10,11 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'material-demo';
+  minDate = new Date();
+  maxDate = new Date(2020, 4, 10);
+
+  dateFilter = date => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  }
 }
