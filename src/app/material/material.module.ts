@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {
   MatAutocompleteModule,
   MatBadgeModule, MatButtonModule,
-  MatButtonToggleModule, MatCardModule,
+  MatButtonToggleModule, MatCardModule, MatCheckboxModule,
   MatDividerModule, MatExpansionModule, MatFormFieldModule,
   MatGridListModule, MatIconModule, MatInputModule,
   MatListModule, MatMenuModule,
-  MatProgressBarModule, MatProgressSpinnerModule, MatSelectModule,
+  MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule,
   MatSidenavModule, MatStepperModule, MatTabsModule, MatToolbarModule
 } from '@angular/material';
 
@@ -19,7 +19,8 @@ const MaterialComponents = [
   MatListModule, MatDividerModule, MatGridListModule,
   MatExpansionModule, MatCardModule, MatTabsModule,
   MatStepperModule, MatFormFieldModule, MatInputModule,
-  MatSelectModule, MatAutocompleteModule
+  MatSelectModule, MatAutocompleteModule, MatCheckboxModule,
+  MatRadioModule
 ];
 
 @NgModule({

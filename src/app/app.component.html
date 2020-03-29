@@ -6,43 +6,26 @@
   <img width="100" alt="Angular Logo"
        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
+
 <div>
-  <form>
-    <mat-form-field>
-      <input type="text" matInput [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of options" [value]="option">
-          {{option}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+  <mat-checkbox>
+    <label>Subscribe</label>
+  </mat-checkbox>
 </div>
 
 <div>
-  <form>
-    <mat-form-field>
-      <input type="text" matInput [matAutocomplete]="auto2">
-      <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFunc">
-        <mat-option *ngFor="let objectOption of objectOptions" [value]="objectOption">
-          {{objectOption.name}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+  <mat-checkbox labelPosition="before" color="primary">
+    <label>Subscribe</label>
+  </mat-checkbox>
 </div>
 
 <div>
-  <form>
-    <mat-form-field>
-      <input type="text" matInput [matAutocomplete]="auto3" [formControl]="myControl">
-      <mat-autocomplete #auto3="matAutocomplete" [displayWith]="displayFunc2">
-        <mat-option *ngFor="let objectOption2 of filteredOptions | async" [value]="objectOption2">
-          {{objectOption2}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+  <mat-radio-group>
+    <mat-radio-button value="angular">Angular</mat-radio-button> <br>
+    <mat-radio-button value="react">React</mat-radio-button> <br>
+    <mat-radio-button value="vue">Vue</mat-radio-button>
+  </mat-radio-group>
 </div>
+
 
 <router-outlet></router-outlet>
