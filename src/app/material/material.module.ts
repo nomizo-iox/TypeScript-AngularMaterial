@@ -7,7 +7,7 @@ import {
   MatGridListModule, MatIconModule, MatInputModule,
   MatListModule, MatMenuModule, MatNativeDateModule,
   MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule,
-  MatSidenavModule, MatStepperModule, MatTabsModule, MatToolbarModule
+  MatSidenavModule, MatStepperModule, MatTabsModule, MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 
 
@@ -20,7 +20,8 @@ const MaterialComponents = [
   MatExpansionModule, MatCardModule, MatTabsModule,
   MatStepperModule, MatFormFieldModule, MatInputModule,
   MatSelectModule, MatAutocompleteModule, MatCheckboxModule,
-  MatRadioModule, MatDatepickerModule, MatNativeDateModule
+  MatRadioModule, MatDatepickerModule, MatNativeDateModule,
+  MatTooltipModule
 ];
 
 @NgModule({
