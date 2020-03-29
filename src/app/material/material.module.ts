@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {
+  MatAutocompleteModule,
   MatBadgeModule, MatButtonModule,
   MatButtonToggleModule, MatCardModule,
   MatDividerModule, MatExpansionModule, MatFormFieldModule,
@@ -18,7 +19,7 @@ const MaterialComponents = [
   MatListModule, MatDividerModule, MatGridListModule,
   MatExpansionModule, MatCardModule, MatTabsModule,
   MatStepperModule, MatFormFieldModule, MatInputModule,
-  MatSelectModule
+  MatSelectModule, MatAutocompleteModule
 ];
 
 @NgModule({
